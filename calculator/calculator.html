@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script>
+            function show(input)
+            {
+                document.getElementById("res").value+=input;
+            }
+            function ac()
+            {
+                document.getElementById("res").value="" ;
+            }
+            function calc(){
+                var output=eval(document.getElementById("res").value);
+                document.getElementById("res").value=output;
+            }
+        </script>
+        <style>
+            .dotted{background-color: antiquewhite;color:black;}
+            .star{background-color:darkgrey;}
+            .unique{background-color: lightslategrey;}
+        </style>
+    </head>
+    <body>
+        <table border="2" cellspacing="5px" cellpadding="5px" class="unique" >
+            <caption> SIMPLE CALCULATOR </caption>
+            <tr>
+                <td colspan="3"><input type="text" id="res" class="star"></td>
+                <td allign="center"><button onclick="ac()">AC</button></td>
+            </tr>
+            <tr>
+                <td align="center"><button onclick="show('1')" class="dotted">1</button></td>
+                <td align="center"><button onclick="show('2')" class="dotted">2</button></td>
+                <td align="center"><button onclick="show('3')" class="dotted">3</button></td>
+                <td align="center"><button onclick="show('+')" class="dotted">+</button></td>
+            </tr>
+        
+            <tr>
+                <td align="center"><button onclick="show('4')" class="dotted">4</button></td>
+                <td align="center"><button onclick="show('5')" class="dotted">5</button></td>
+                <td align="center"><button onclick="show('6')" class="dotted">6</button></td>
+                <td align="center"><button onclick="show('-')" class="dotted">-</button></td>
+            </tr>
+            <tr>
+                <td align="center"><button onclick="show('7')" class="dotted">7</button></td>
+                <td align="center"><button onclick="show('8')" class="dotted">8</button></td>
+                <td align="center"><button onclick="show('9')" class="dotted">9</button></td>
+                <td align="center"><button onclick="show('*')" class="dotted">*</button></td>
+            </tr>
+            <tr>
+                <td align="center"><button onclick="show('0')" class="dotted">0</button></td>
+                <td align="center"><button onclick="show('%')" class="dotted">%</button></td>
+                <td align="center"><button onclick="show('/')" class="dotted">/</button></td>
+                <td align="center"><button onclick="calc()" class="dotted">=</button></td>
+            </tr>
+            
+
+
+        </table>
+    </body>
+</html>
